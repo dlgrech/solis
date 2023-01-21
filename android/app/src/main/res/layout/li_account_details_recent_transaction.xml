@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground"
+    android:minHeight="?listPreferredItemHeight"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/type"
+        style="@style/TransactionDetails.SmallHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/description"
+        style="@style/TransactionDetails.Value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="?android:textColorPrimary" />
+
+    <TextView
+        android:id="@+id/timestamp"
+        style="@style/TransactionDetails.Value"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="?android:textColorSecondary" />
+
+</LinearLayout>

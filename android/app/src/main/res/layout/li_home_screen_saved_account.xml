@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?selectableItemBackground"
+    android:gravity="center_vertical"
+    android:minHeight="?listPreferredItemHeightLarge"
+    android:orientation="vertical"
+    android:paddingHorizontal="@dimen/padding_large">
+
+    <TextView
+        android:id="@+id/account_name"
+        style="@style/TextAppearance.Solis.Label2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="middle"
+        android:maxLines="1" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.dgsd.solis.common.shimmer.ShimmerView
+            android:id="@+id/balance_loading_indicator"
+            android:layout_width="56dp"
+            android:layout_height="20dp" />
+
+        <TextView
+            android:id="@+id/balance"
+            style="@style/TextAppearance.Solis.Label1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?android:textColorSecondary" />
+
+    </FrameLayout>
+
+</LinearLayout>

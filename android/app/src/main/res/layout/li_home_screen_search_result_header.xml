@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/text"
+    style="@style/TextAppearance.Solis.Label3"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="start|center_vertical"
+    android:paddingHorizontal="@dimen/padding_default"
+    android:paddingVertical="@dimen/padding_xsmall"
+    android:singleLine="true"
+    android:textColor="?colorPrimary" />

@@ -1,0 +1,68 @@
+plugins {
+    id "com.android.application"
+    id "org.jetbrains.kotlin.android"
+    id "com.google.gms.google-services"
+}
+
+android {
+    compileSdk 33
+
+    namespace "com.dgsd.solis"
+
+    defaultConfig {
+        applicationId "com.dgsd.solis"
+        minSdk 28
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        buildConfigField("String", "HELIUS_API_KEY", "\"$HELIUS_API_KEY\"")
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            applicationIdSuffix ".debug"
+            versionNameSuffix "-debug"
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+        freeCompilerArgs += [
+                "-Xopt-in=kotlinx.coroutines.ExperimentalCoroutinesApi",
+                "-Xopt-in=kotlinx.coroutines.ObsoleteCoroutinesApi"
+        ]
+    }
+}
+
+dependencies {
+    implementation libs.appcompat
+    implementation libs.androidx.fragment.ktx
+    implementation libs.androidx.lifecycle.process
+    implementation libs.androidx.swiperefresh
+    implementation libs.koin.android
+    implementation libs.google.material
+    implementation libs.shimmer.android
+    implementation libs.zxing.android
+    implementation libs.lottie
+    implementation libs.coil
+    implementation libs.ksol.core
+    implementation libs.ksol.rpc
+    implementation libs.ksol.solpay
+    implementation libs.khelius.transactions
+    implementation libs.khelius.balance
+
+    implementation platform(libs.firebase.bom)
+    implementation libs.firebase.auth
+    implementation libs.firebase.cloud.messaging
+    implementation libs.firebase.realtime.database
+
+    testImplementation libs.android.junit
+}
