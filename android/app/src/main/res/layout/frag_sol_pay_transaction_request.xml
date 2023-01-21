@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        style="@style/SolisToolbar"
+        app:navigationIcon="@drawable/ic_baseline_close_24"
+        app:title="@string/sol_pay_transaction_request_bottomsheet_title" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipChildren="false"
+        android:fillViewport="true"
+        android:overScrollMode="never">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/error_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_default"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/error_message"
+                    style="@style/TextAppearance.Solis.Label4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/try_again_button"
+                    style="@style/TextAppearance.Link"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/padding_small"
+                    android:gravity="center"
+                    android:text="@string/common_try_again" />
+
+            </LinearLayout>
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/loading_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/padding_default"
+                android:visibility="gone"
+                app:shimmer_duration="@integer/shimmer_duration_ms"
+                app:shimmer_highlight_alpha="@dimen/shimmer_alpha">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        style="@style/TransactionDetails.SmallHeader"
+                        android:layout_width="40dp"
+                        android:layout_height="20dp"
+                        android:layout_marginBottom="@dimen/padding_xsmall"
+                        android:background="@drawable/shimmer_background_rounded" />
+
+                    <View
+                        style="@style/TransactionDetails.Value"
+                        android:layout_width="100dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/shimmer_background_rounded" />
+
+                    <View
+                        style="@style/TransactionDetails.SmallHeader"
+                        android:layout_width="40dp"
+                        android:layout_height="20dp"
+                        android:layout_marginBottom="@dimen/padding_xsmall"
+                        android:background="@drawable/shimmer_background_rounded" />
+
+                    <View
+                        style="@style/TransactionDetails.Value"
+                        android:layout_width="100dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/shimmer_background_rounded" />
+
+                    <View
+                        style="@style/TransactionDetails.SmallHeader"
+                        android:layout_width="40dp"
+                        android:layout_height="20dp"
+                        android:layout_marginBottom="@dimen/padding_xsmall"
+                        android:background="@drawable/shimmer_background_rounded" />
+
+                    <View
+                        style="@style/TransactionDetails.Value"
+                        android:layout_width="100dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/shimmer_background_rounded" />
+
+                    <View
+                        style="@style/TransactionDetails.SmallHeader"
+                        android:layout_width="40dp"
+                        android:layout_height="20dp"
+                        android:layout_marginBottom="@dimen/padding_xsmall"
+                        android:background="@drawable/shimmer_background_rounded" />
+
+                    <View
+                        style="@style/TransactionDetails.Value"
+                        android:layout_width="100dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/shimmer_background_rounded" />
+
+                    <View
+                        style="@style/TransactionDetails.SmallHeader"
+                        android:layout_width="40dp"
+                        android:layout_height="20dp"
+                        android:layout_marginBottom="@dimen/padding_xsmall"
+                        android:background="@drawable/shimmer_background_rounded" />
+
+                    <View
+                        style="@style/TransactionDetails.Value"
+                        android:layout_width="100dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/shimmer_background_rounded" />
+
+                    <View
+                        style="@style/TransactionDetails.SmallHeader"
+                        android:layout_width="40dp"
+                        android:layout_height="20dp"
+                        android:layout_marginBottom="@dimen/padding_xsmall"
+                        android:background="@drawable/shimmer_background_rounded" />
+
+                    <View
+                        style="@style/TransactionDetails.Value"
+                        android:layout_width="100dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/shimmer_background_rounded" />
+
+                    <View
+                        style="@style/TransactionDetails.SmallHeader"
+                        android:layout_width="40dp"
+                        android:layout_height="20dp"
+                        android:layout_marginBottom="@dimen/padding_xsmall"
+                        android:background="@drawable/shimmer_background_rounded" />
+
+                    <View
+                        style="@style/TransactionDetails.Value"
+                        android:layout_width="100dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/shimmer_background_rounded" />
+
+                    <View
+                        style="@style/TransactionDetails.SmallHeader"
+                        android:layout_width="40dp"
+                        android:layout_height="20dp"
+                        android:layout_marginBottom="@dimen/padding_xsmall"
+                        android:background="@drawable/shimmer_background_rounded" />
+
+                    <View
+                        style="@style/TransactionDetails.Value"
+                        android:layout_width="100dp"
+                        android:layout_height="20dp"
+                        android:background="@drawable/shimmer_background_rounded" />
+
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+            <LinearLayout
+                android:id="@+id/content_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/padding_default"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal" />
+
+                <TextView
+                    android:id="@+id/label"
+                    style="@style/TransactionDetails.Value"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/padding_xsmall"
+                    android:layout_marginBottom="@dimen/padding_default"
+                    android:gravity="center" />
+
+                <TextView
+                    android:id="@+id/header_amount"
+                    style="@style/TransactionDetails.SmallHeader"
+                    android:text="@string/solpay_transaction_request_header_amount" />
+
+                <TextView
+                    android:id="@+id/value_amount"
+                    style="@style/TransactionDetails.Value" />
+
+                <TextView
+                    android:id="@+id/header_message"
+                    style="@style/TransactionDetails.SmallHeader"
+                    android:text="@string/solpay_transaction_request_header_message" />
+
+                <TextView
+                    android:id="@+id/value_message"
+                    style="@style/TransactionDetails.Value" />
+
+
+                <TextView
+                    android:id="@+id/header_link"
+                    style="@style/TransactionDetails.SmallHeader"
+                    android:text="@string/solpay_transaction_request_header_link" />
+
+                <TextView
+                    android:id="@+id/value_link"
+                    style="@style/TransactionDetails.Value" />
+
+            </LinearLayout>
+
+        </FrameLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

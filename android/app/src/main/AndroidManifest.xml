@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.NFC" />
+
+    <application
+        android:name=".SolisApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Solis"
+        android:usesCleartextTraffic="true">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".DeeplinkHostActivity"
+            android:exported="true"
+            android:theme="@style/Theme.Solis.Transparent">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="transaction"
+                    android:scheme="solis" />
+                <data
+                    android:host="address"
+                    android:scheme="solis" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="explorer.solana.com"
+                    android:pathPrefix="/tx"
+                    android:scheme="https" />
+                <data
+                    android:host="explorer.solana.com"
+                    android:pathPrefix="/tx"
+                    android:scheme="http" />
+                <data
+                    android:host="explorer.solana.com"
+                    android:pathPrefix="/address"
+                    android:scheme="https" />
+                <data
+                    android:host="explorer.solana.com"
+                    android:pathPrefix="/address"
+                    android:scheme="http" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="solscan.io"
+                    android:pathPrefix="/account"
+                    android:scheme="https" />
+                <data
+                    android:host="solscan.io"
+                    android:pathPrefix="/account"
+                    android:scheme="http" />
+                <data
+                    android:host="solscan.io"
+                    android:pathPrefix="/tx"
+                    android:scheme="https" />
+                <data
+                    android:host="solscan.io"
+                    android:pathPrefix="/tx"
+                    android:scheme="http" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="solanabeach.io"
+                    android:pathPrefix="/address"
+                    android:scheme="https" />
+                <data
+                    android:host="solanabeach.io"
+                    android:pathPrefix="/address"
+                    android:scheme="http" />
+                <data
+                    android:host="solanabeach.io"
+                    android:pathPrefix="/transaction"
+                    android:scheme="https" />
+                <data
+                    android:host="solanabeach.io"
+                    android:pathPrefix="/transaction"
+                    android:scheme="http" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="solana.fm"
+                    android:pathPrefix="/address"
+                    android:scheme="https" />
+                <data
+                    android:host="solana.fm"
+                    android:pathPrefix="/address"
+                    android:scheme="http" />
+                <data
+                    android:host="solana.fm"
+                    android:pathPrefix="/tx"
+                    android:scheme="https" />
+                <data
+                    android:host="solana.fm"
+                    android:pathPrefix="/tx"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.dgsd.solis.push.SolisFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>
